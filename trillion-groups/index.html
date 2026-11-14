@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trillion Group — AI Technologies and Oil & Gas Equipment Trading in Abu Dhabi, United Arab Emirates.">
+  <title>Trillion Group | Technology & Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+  <style>
+    .circle-home{min-height:100vh;padding:154px 0 76px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,rgba(10,91,86,.28),transparent 48%),linear-gradient(135deg,#061819 0%,#031011 70%)}
+    .circle-home:before,.circle-home:after{content:"";position:absolute;border:1px solid rgba(199,166,107,.10);border-radius:50%;pointer-events:none}
+    .circle-home:before{width:760px;height:760px;left:50%;top:48%;transform:translate(-50%,-50%)}
+    .circle-home:after{width:980px;height:980px;left:50%;top:48%;transform:translate(-50%,-50%)}
+    .circle-intro{text-align:center;position:relative;z-index:2}
+    .circle-intro .eyebrow{justify-content:center}
+    .circle-intro h1{font-size:clamp(42px,6vw,76px);font-weight:600;line-height:1.04;margin:24px auto 18px;max-width:900px}
+    .circle-intro h1 em{font-style:normal;color:var(--gold)}
+    .circle-intro p{color:#aebdb7;max-width:620px;margin:0 auto;font-size:16px}
+    .business-orbit{position:relative;z-index:2;max-width:960px;margin:58px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,7vw,100px);align-items:center}
+    .business-orbit:before{content:"";position:absolute;z-index:-1;width:330px;height:330px;border:1px solid rgba(199,166,107,.35);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 18px rgba(199,166,107,.025),0 0 0 42px rgba(199,166,107,.018)}
+    .business-circle{width:min(100%,365px);aspect-ratio:1/1;border-radius:50%;margin:auto;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;border:1px solid rgba(199,166,107,.62);background:radial-gradient(circle at 50% 35%,rgba(16,103,97,.48),rgba(4,25,26,.96) 69%);box-shadow:inset 0 0 45px rgba(14,117,108,.10),0 20px 65px rgba(0,0,0,.22);transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+    .business-circle:before{content:"";position:absolute;inset:12px;border:1px solid rgba(199,166,107,.22);border-radius:50%}
+    .business-circle:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--gold);top:23px;left:50%;transform:translateX(-50%);box-shadow:0 0 18px rgba(199,166,107,.8)}
+    .business-circle:hover{transform:translateY(-8px) scale(1.015);border-color:#e4c68d;box-shadow:inset 0 0 55px rgba(14,117,108,.17),0 25px 75px rgba(0,0,0,.34)}
+    .circle-number{font-size:9px;letter-spacing:.22em;color:#d2b77f;font-weight:700;margin-bottom:18px}
+    .circle-symbol{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(199,166,107,.55);color:#e0c38a;font-size:27px;margin-bottom:18px;background:rgba(4,23,24,.5)}
+    .business-circle h2{font-size:clamp(21px,2.5vw,29px);font-weight:700;line-height:1.18;max-width:270px;margin:0 0 13px}
+    .business-circle p{font-size:12px;line-height:1.7;color:#aebdb7;max-width:250px;margin:0}
+    .circle-cta{display:inline-flex;align-items:center;gap:12px;margin-top:20px;color:#e4cd9e;font-size:11px;font-weight:700;letter-spacing:.06em}
+    .circle-cta span{font-size:17px;transition:transform .25s}
+    .business-circle:hover .circle-cta span{transform:translate(4px,-2px)}
+    .center-mark{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:112px;height:112px;border-radius:50%;background:#f0ede5;border:2px solid rgba(199,166,107,.9);display:grid;place-items:center;box-shadow:0 0 0 9px rgba(4,18,19,.88),0 0 35px rgba(0,0,0,.5)}
+    .center-mark img{display:block;width:92px;height:auto;object-fit:contain}
+    .circle-footnote{position:relative;z-index:2;text-align:center;margin:42px auto 0;color:#879993;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+    .home-contact{background:#eae4d8;color:#132626;padding:24px 0}
+    .home-contact a{color:#173b39;font-size:12px;font-weight:700}
+    .home-contact .contact-divider{height:24px;width:1px;background:rgba(19,38,38,.2)}
+    /* Homepage brand alignment: logo centered in the header and footer */
+    .gateway-page .site-nav .container{position:relative;min-height:44px;justify-content:flex-end}
+    .gateway-page .site-nav .navbar-brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0;padding:0}
+    .gateway-page .site-nav .navbar-collapse{flex-grow:0}
+    .gateway-page .site-nav .navbar-nav{margin-left:auto}
+    .home-footer{padding:30px 0 24px;text-align:center;background:#020b0c;border-top:1px solid rgba(255,255,255,.07)}
+    .home-footer .footer-logo{display:block;width:205px;max-width:75vw;height:auto;margin:0 auto 16px;padding:7px 12px;background:#f0ede5;border-radius:4px;box-shadow:0 3px 18px rgba(0,0,0,.18)}
+    .home-footer .footer-meta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;color:#82918c;font-size:11px}
+    .home-footer .footer-meta a{color:#cbb27f}
+    @media(max-width:991px){
+      .gateway-page .site-nav .container{justify-content:space-between}
+      .gateway-page .site-nav .navbar-brand{left:50%;transform:translate(-50%,-50%)}
+      .gateway-page .site-nav .navbar-collapse{flex-basis:100%;flex-grow:1}
+    }
+    @media(max-width:767px){.circle-home{padding:132px 0 60px}.business-orbit{grid-template-columns:1fr;gap:25px;margin-top:42px}.business-orbit:before{width:280px;height:650px}.business-circle{width:min(82vw,330px);padding:34px}.center-mark{position:relative;left:auto;top:auto;transform:none;margin:-8px auto;width:92px;height:92px;order:2}.center-mark img{width:74px}.business-orbit .ai-circle{order:1}.business-orbit .energy-circle{order:3}.circle-footnote{margin-top:28px}.home-contact .contact-divider{display:none}}
+  </style>
+</head>
+<body class="gateway-page">
+  <div class="preloader"><img src="assets/logo.png" alt="Trillion Group"><span class="loader-line"></span></div>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="Trillion Group"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav"><div class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <a class="nav-link active" href="index.html">Home</a><a class="nav-link" href="ai-technologies/home.html">AI Technologies</a><a class="nav-link" href="oil-gas/home.html">Oil &amp; Gas</a><a class="nav-link nav-contact" href="#contact">Contact</a><button class="btn btn-accent ms-lg-2 my-2 my-lg-0" type="button" data-bs-toggle="modal" data-bs-target="#leadModal">ENQUIRE ↗</button>
+      </div></div>
+    </div>
+  </nav>
+  <main>
+    <section class="circle-home">
+      <div class="container position-relative">
+        <div class="circle-intro">
+          <div class="eyebrow"><span></span> TRILLION GROUP · ABU DHABI, UAE <span></span></div>
+          <h1>Two divisions.<br><em>One vision for progress.</em></h1>
+          <p>Explore our specialist businesses in intelligent technology and energy-sector equipment trading.</p>
+        </div>
+        <div class="business-orbit">
+          <a class="business-circle ai-circle" href="ai-technologies/home.html" aria-label="Explore AI Technologies">
+            <span class="circle-number">01 / INTELLIGENCE</span>
+            <span class="circle-symbol">✳</span>
+            <h2>AI Technologies</h2>
+            <p>Intelligent digital solutions that help organisations unlock insight, improve processes and move forward.</p>
+            <span class="circle-cta">EXPLORE DIVISION <span>↗</span></span>
+          </a>
+          <div class="center-mark"><img src="assets/logo.png" alt="Trillion Group"></div>
+          <a class="business-circle energy-circle" href="oil-gas/home.html" aria-label="Explore Oil and Gas Equipment Trading">
+            <span class="circle-number">02 / ENERGY</span>
+            <span class="circle-symbol">⌁</span>
+            <h2>Oil &amp; Gas Equipment Trading</h2>
+            <p>Responsive equipment sourcing and trading support for the energy industry, built on quality and trust.</p>
+            <span class="circle-cta">EXPLORE DIVISION <span>↗</span></span>
+          </a>
+        </div>
+        <div class="circle-footnote">Technology · Energy · Trusted partnerships</div>
+      </div>
+    </section>
+    <section class="home-contact" id="contact">
+      <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+        <div><strong>LET’S CONNECT</strong><span class="d-block small opacity-75">Office M05, West Cornish Road, Abu Dhabi, United Arab Emirates</span></div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-2 gap-sm-4">
+          <a href="mailto:ai@trillion-groups.com">AI: ai@trillion-groups.com</a><span class="contact-divider"></span><a href="mailto:sales@trillion-groups.com">OIL &amp; GAS: sales@trillion-groups.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal fade lead-modal" id="leadModal" tabindex="-1" aria-labelledby="leadModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content">
+      <div class="modal-header"><div><h2 class="modal-title" id="leadModalTitle">Let’s start a conversation.</h2><div class="modal-subtitle">Choose the Trillion Group team for your enquiry.</div></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body"><form id="leadForm" data-recipient="ai@trillion-groups.com">
+        <div class="row g-3">
+          <div class="col-md-6"><label for="leadName">YOUR NAME *</label><input class="form-control" id="leadName" name="name" required placeholder="Full name"></div>
+          <div class="col-md-6"><label for="leadEmail">EMAIL ADDRESS *</label><input class="form-control" id="leadEmail" name="email" type="email" required placeholder="name@company.com"></div>
+          <div class="col-md-6"><label for="leadCompany">COMPANY</label><input class="form-control" id="leadCompany" name="company" placeholder="Company name"></div>
+          <div class="col-md-6"><label for="leadDivision">WHICH TEAM? *</label><select class="form-select" id="leadDivision" name="division" required><option value="ai@trillion-groups.com">AI Technologies</option><option value="sales@trillion-groups.com">Oil &amp; Gas Equipment Trading</option></select></div>
+          <div class="col-12"><label for="leadSubject">SUBJECT</label><input class="form-control" id="leadSubject" name="subject" placeholder="How can we help?"></div>
+          <div class="col-12"><label for="leadMessage">MESSAGE *</label><textarea class="form-control" id="leadMessage" name="message" rows="4" required placeholder="Tell us about your enquiry..."></textarea></div>
+          <div class="col-12 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3"><small class="text-secondary">Your email application will open with the enquiry details ready to send.</small><button class="btn btn-dark-gold" type="submit">PREPARE ENQUIRY ↗</button></div>
+        </div>
+      </form></div>
+    </div></div>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+  <footer class="home-footer">
+    <div class="container">
+      <a href="index.html" aria-label="Trillion Group home"><img class="footer-logo" src="assets/logo.png" alt="Trillion Group"></a>
+      <div class="footer-meta">
+        <span>© <span data-year></span> Trillion Group. All rights reserved.</span>
+        <span aria-hidden="true">·</span>
+        <span>Abu Dhabi · United Arab Emirates</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
